@@ -9,6 +9,6 @@ class HomeController extends Controller {
     public function index(){
         $prodotti = Product::all();
         // dd($prodotti);
-        return view("home", ["prodotti"-> $prodotti]);
+        return view("home", ["prodotti"=> $prodotti]);
     }
 }

@@ -11,4 +11,7 @@
 |
 */
 
-Route::get('/', "HomeController@index");
+Route::get('/', "ClothController@index")->name('all-products');
+Route::get('/clothes/create', "ClothController@create")->name('create-product');
+// possiamo tenere lo stesso url perchè non sarà vista dall utente, ci serve solo per recuparare i dati
+Route::post('/clothes/create', "ClothController@store")->name('store-product');
